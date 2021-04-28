@@ -1,72 +1,48 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+  target: "static",
 
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - network-contest',
-    title: 'network-contest',
+    titleTemplate: "Network Contest",
+    title: "Network Contest",
     htmlAttrs: {
-      lang: 'en',
+      lang: "en"
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "" }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: "icon", type: "image/png", href: "/ccs.png" }]
   },
-
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  css: ["~/assets/sass/theme.sass", "~/assets/sass/class.sass"],
   plugins: [],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+  buildModules: ["@nuxtjs/eslint-module", "@nuxtjs/vuetify"],
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
-  ],
+  modules: ["@nuxtjs/axios", "nuxt-webfontloader"],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-  ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
-
-  // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
-  vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
-        },
-      },
-    },
+  axios: {
+    baseURL: "http://localhost:8000"
+    // baseURL: "https://oyusec-server.herokuapp.com"
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  webfontloader: {
+    google: {
+      families: ["Press+Start+2P", "Montserrat", "Exo+2", "Play", "Inter"],
+      urls: [
+        "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap",
+        "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap",
+        "https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap",
+        "https://fonts.googleapis.com/css2?family=Play&display=swap",
+        "https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      ]
+    }
+  },
+
+  vuetify: {
+    customVariables: ["~/assets/scss/variables.scss"]
+  },
+
+  build: {}
 }
