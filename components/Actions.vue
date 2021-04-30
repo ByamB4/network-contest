@@ -3,7 +3,7 @@
     <v-card-title>
       <v-row>
         <v-col cols="6">
-          <h3 class="col-dark">Actions</h3>
+          <h4 class="col-dark">Actions</h4>
         </v-col>
         <v-col cols="6" class="d-flex justify-end">
           <v-switch v-model="show" class="mt-0" color="indigo" dense inset />
@@ -20,7 +20,7 @@
       <div
         v-for="(ac, _) in actions"
         :key="_"
-        class="f-17"
+        class="f-15"
         :class="{ margin15: _ > 0 }"
       >
         <span class="col-blue f-s-bold" v-text="ac.user" />

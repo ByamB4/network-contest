@@ -1,6 +1,9 @@
 export default {
   ssr: false,
   target: "static",
+  router: {
+    base: "/network-contest/"
+  },
   head: {
     titleTemplate: "%s - network-contest",
     title: "network-contest",

@@ -1,18 +1,18 @@
 <template>
-  <v-row>
-    <v-col cols="3" align="center">
-      <h2 class="col-dark">Rank</h2>
-      <span class="col-light f-24 f-s-bold">3</span>
+  <v-row justify="end">
+    <v-col cols="2" align="center">
+      <h3 class="col-dark">Rank</h3>
+      <h2 class="col-light">3</h2>
     </v-col>
-    <v-col cols="3" align="center">
-      <h2 class="col-dark">Score</h2>
-      <span class="col-light f-24 f-s-bold">1500</span>
+    <v-col cols="2" align="center">
+      <h3 class="col-dark">Score</h3>
+      <h2 class="col-light">1500</h2>
     </v-col>
-    <v-col cols="3" align="center">
-      <h2 class="col-dark">School</h2>
-      <span class="col-light f-24 f-s-bold">SICT</span>
+    <v-col cols="2" align="center">
+      <h3 class="col-dark">School</h3>
+      <h2 class="col-light">SICT</h2>
     </v-col>
-    <v-col cols="3" align="center">
+    <v-col cols="2" align="center">
       <v-avatar
         rounded
         size="64"

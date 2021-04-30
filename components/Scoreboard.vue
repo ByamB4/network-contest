@@ -3,7 +3,7 @@
     <v-card-title>
       <v-row>
         <v-col cols="6">
-          <h3 class="col-dark">Scoreboard</h3>
+          <h4 class="col-dark">Scoreboard</h4>
         </v-col>
         <v-col cols="6" class="d-flex justify-end">
           <v-switch v-model="show" class="mt-0" color="indigo" dense inset />
@@ -20,7 +20,7 @@
       <div
         v-for="(sc, _) in scores"
         :key="_"
-        class="f-17"
+        class="f-15"
         :class="{ margin15: _ > 0 }"
       >
         <v-row class="f-s-bold">
@@ -38,7 +38,7 @@
       </div>
     </v-card-text>
     <v-card-actions class="d-flex justify-center">
-      <span class="col-gray f-18">View full rating</span>
+      <span class="col-gray f-16">View full rating</span>
       <v-icon class="ml-2" color="#3246D3">mdi-arrow-right-drop-circle</v-icon>
     </v-card-actions>
   </v-card>
