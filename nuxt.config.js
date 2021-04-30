@@ -1,72 +1,45 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
-
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  target: "static",
   head: {
-    titleTemplate: '%s - network-contest',
-    title: 'network-contest',
+    titleTemplate: "%s - network-contest",
+    title: "network-contest",
     htmlAttrs: {
-      lang: 'en',
+      lang: "en"
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "" }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: "icon", type: "image/png", href: "/ccs-logo.png" }]
   },
-
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
+  css: ["~/assets/sass/theme.sass", "~/assets/sass/class.sass"],
+  plugins: ["~/plugins/consts"],
   components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
-  ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-  ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  buildModules: ["@nuxtjs/eslint-module", "@nuxtjs/vuetify"],
+  modules: ["@nuxtjs/axios", "nuxt-webfontloader"],
   axios: {},
-
-  // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
-  vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
-        },
-      },
-    },
+  webfontloader: {
+    google: {
+      families: ["Press+Start+2P", "Montserrat", "Exo+2", "Play"],
+      urls: [
+        "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap",
+        "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap",
+        "https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap",
+        "https://fonts.googleapis.com/css2?family=Play&display=swap"
+      ]
+    }
   },
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  vuetify: {
+    customVariables: ["~/assets/scss/variables.scss"],
+    theme: {
+      themes: {
+        light: {
+          success: "#00d93d"
+        }
+      }
+    }
+  },
+  build: {}
 }
