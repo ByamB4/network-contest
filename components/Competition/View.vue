@@ -50,32 +50,45 @@
             </v-card-text>
             <v-card-actions>
               <v-container class="py-0">
-                <v-row class="py-0 my-n3">
+                <v-row no-gutters>
                   <v-col cols="6">
                     <v-checkbox
                       v-model="checkbox1"
-                      :label="`Checkbox 1: ${checkbox1.toString()}`"
+                      on-icon="mdi-checkbox-marked-circle"
+                      off-icon="mdi-checkbox-blank-circle-outline"
+                      label="PC-2 дамжихгүй"
                     ></v-checkbox>
                   </v-col>
                   <v-col cols="6">
                     <v-checkbox
                       v-model="checkbox2"
-                      :label="`Checkbox 2: ${checkbox2.toString()}`"
+                      on-icon="mdi-checkbox-marked-circle"
+                      off-icon="mdi-checkbox-blank-circle-outline"
+                      label="PC-2 дамжихгүй"
                     ></v-checkbox>
                   </v-col>
                 </v-row>
-                <v-row class="py-0 my-n5">
+                <v-row no-gutters>
                   <v-col cols="6">
                     <v-checkbox
                       v-model="checkbox3"
-                      :label="`Checkbox 3: ${checkbox3.toString()}`"
+                      on-icon="mdi-checkbox-marked-circle"
+                      off-icon="mdi-checkbox-blank-circle-outline"
+                      label="PC-2 дамжихгүй"
                     ></v-checkbox>
                   </v-col>
                   <v-col cols="6">
                     <v-checkbox
                       v-model="checkbox4"
-                      :label="`Checkbox 4: ${checkbox4.toString()}`"
+                      on-icon="mdi-checkbox-marked-circle"
+                      off-icon="mdi-checkbox-blank-circle-outline"
+                      label="PC-2 дамжихгүй"
                     ></v-checkbox>
+                  </v-col>
+                </v-row>
+                <v-row justify="end" no-gutters>
+                  <v-col cols="3">
+                    <v-btn color="primary" elevation="2">Submit</v-btn>
                   </v-col>
                 </v-row>
               </v-container>
@@ -209,6 +222,10 @@ export default {
   &--active
     border-radius: 20px !important
     background-color: #2196F3 !important
-.theme--light.v-btn.v-btn--has-bg
+.theme--light
+  .v-btn.v-btn--has-bg
     background-color: #ddd
+  .v-label
+    font-size: 15px
+    color: #000 !important
 </style>
